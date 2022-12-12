@@ -1,10 +1,8 @@
 import random
 
 file = open("names.txt", "r", encoding="utf-8")
-reader = file.readlines()
-x = list()
-for line in reader:
-    x.append(line)
+names = file.readlines()
 
-name = random.choice(x)
-print(name)
+amount = int(input("How many names would you like to generate? "))
+for _ in range(amount):
+    print(random.choice(names).strip())
